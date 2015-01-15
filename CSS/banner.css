@@ -1,0 +1,67 @@
+.banner{
+	display: inline-block;
+	font-family: 'icomoon';
+	font-size: 16px;
+
+}
+
+#banner-slider{
+	width: 1000px; 
+	margin:  0 auto; 
+	height: 360px;
+	font-family: 'Carme';
+}
+#banner-slider .container {
+	background-color:#0BACF8;
+	width:280px;
+	float:left;
+	padding:0px 25px 25px 25px;
+	text-align:left;
+	max-height:335px;
+	height: 100%;
+	overflow:auto;
+}
+#banner-slider .container h1{
+	color:#FFF;
+	font-size:33px;
+	margin:25px 0px 0px 0px;
+}
+#banner-slider .container p{
+	color:#FFF;
+	padding: 22px 0px 40px 0px;
+	border-bottom: 1px solid #FFF;
+	margin-bottom:23px;
+	line-height:18px;
+	font-size:16px;
+}
+#banner-slider .container a{
+	color:#FFF;
+	font-size:16px;
+	text-transform:uppercase;
+	text-decoration:none;
+	/*background:url(../../images/05.png) right no-repeat;*/
+	padding:7px 0px 6px 0px;
+	
+}
+#banner-slider .container a span.errow{
+	font-family: 'FontAwesome';
+	text-decoration: none;
+	border: 1px solid;
+	padding: 3px 4px 3px 4px;
+	border-radius: 11px;
+	margin-left:12px;
+}
+#banner-slider .container a:hover span{
+	text-decoration:underline;
+}
+#banner-slider .container a:hover span.errow{
+	text-decoration:none;
+}
+
+.flex-container {
+	
+	position: absolute;
+	height: 100%;
+	top: 0;	
+}
+#banner-slider .flex-control-nav{top: 340px; position: absolute; width: auto; right: 0; margin-right: 15px; }

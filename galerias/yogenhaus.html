@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>LedFactory</title>
+	<link rel="shortcut icon" href="../imagenes/logo_led.ico">
+	<link rel="stylesheet" href="../cssindex/galerias.css" type="text/css">
+	<link rel="stylesheet" href="../cssindex/style.css" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Carme" type="text/css">
+	<script type="text/javascript" src="../scripts/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo">
+				<img src="../imagenes/logo.png" alt="Logo-Led-Factory" id="logo" width="230" height="110">
+			</div>
+			<div class="sociales">
+
+				<span class="FB">
+					<a href="https://www.facebook.com/pages/Led-Factory/650053065054257?fref=ts"  target="_blank" class="icon-facebook3"></a>
+				</span>
+
+				<span class="GPlus">
+					<a href="https://plus.google.com/u/0/104666933886187082189/posts" target="_blank" class="icon-googleplus2" target="_blank"></a>
+				</span>
+			</div>
+			<div class="visita">
+				<strong>Siguenos en: </strong>
+			</div>
+						<nav>
+            	<ul id="menu">
+	            	<li>
+	            		<a href="index.html" class="transicion">INICIO</a>
+	            	</li>
+
+	            	<li>
+	            		<a href="galeria.html" class="transicion">GALERIA</a>
+	            	</li>
+
+	            	<li>
+	            		<a href="noticias.html" class="transicion">NOVEDADES</a>
+	            	</li>
+
+	            	<li class="li_submenu">
+	            		<a href="javascript:void(0);">PRODUCTOS</a>
+	                	<!--<div class="sub">
+		                    <ul class="ul_submenu transicion">
+
+		                        <li>
+		                        	<a href="#" class="transicion submnu">Comercial</a>
+		                        </li>
+
+		                        <li>
+		                        	<a href="#" class="transicion submnu">Residencial</a>
+		                        </li>
+		                        <li>
+		                        	<a href="#" class="transicion submnu">Industrial</a>
+		                        </li>
+		                        <li>
+		                        	<a href="#" class="transicion submnu">Publico</a>
+		                        </li>
+
+		                    </ul>
+	                    </div>-->
+	                </li>
+
+	            	<li>
+	            		<a href="promociones.html" class="transicion">PROMOCIONES</a>
+	            	</li>
+	            	
+	            	<li>
+	            		<a href="documentacion.html" class="transicion">TIPS Y CONCEPTOS</a>
+	            	</li>
+	            	
+	            	<li>
+	            		<a href="contacto.php" class="transicion">CONTACTO</a>
+	            	</li>
+
+            	</ul> 
+			</nav>
+		</header>
+		<section class="contenido">
+			<div class="lugar">
+				<h1>Yogenhaus</h1>
+			</div>
+			<div id='slider2'>
+			<div>
+				<div id="bigPic">
+					<img src="gYogenhaus/1.jpg" alt="" />
+					<img src="gYogenhaus/2.jpg" alt="" />
+					<img src="gYogenhaus/3.jpg" alt="" />
+				</div>
+			
+				<div class="thumbs">
+				<ul id="thumbs">
+					<li class='active' rel='1'><img src="gYogenhaus/1_thumb.jpg" alt="" /></li>
+					<li rel='2'><img src="gYogenhaus/2_thumb.jpg" alt="" /></li>
+					<li rel='3'><img src="gYogenhaus/3_thumb.jpg" alt="" /></li>
+				</ul>
+				</div>
+		
+			</div>
+		<div class='clearfix'></div>
+		</div>
+
+	<script type="text/javascript">
+	var currentImage;
+    var currentIndex = -1;
+    var interval;
+    function showImage(index){
+        if(index < $('#bigPic img').length){
+        	var indexImage = $('#bigPic img')[index]
+            if(currentImage){   
+            	if(currentImage != indexImage ){
+                    $(currentImage).css('z-index',2);
+                    clearTimeout(myTimer);
+                    $(currentImage).fadeOut(250, function() {
+					    myTimer = setTimeout("showNext()", 3000);
+					    $(this).css({'display':'none','z-index':1})
+					});
+                }
+            }
+            $(indexImage).css({'display':'block', 'opacity':1});
+            currentImage = indexImage;
+            currentIndex = index;
+            $('#thumbs li').removeClass('active');
+            $($('#thumbs li')[index]).addClass('active');
+        }
+    }
+    
+    function showNext(){
+        var len = $('#bigPic img').length;
+        var next = currentIndex < (len-1) ? currentIndex + 1 : 0;
+        showImage(next);
+    }
+    
+    var myTimer;
+    
+    $(document).ready(function() {
+	    myTimer = setTimeout("showNext()", 3000);
+		showNext(); //loads first image
+        $('#thumbs li').bind('click',function(e){
+        	var count = $(this).attr('rel');
+        	showImage(parseInt(count)-1);
+        });
+	});
+    
+	
+	</script>	
+		</section>
+		<section class="galerias">
+    	<div class="vacio"></div>
+    	<span class="titulo">Mira todos nuestros proyectos realizados</span>
+    	<div class="vacio"></div>
+			<article class="posts">
+					<ul>
+ 						<li class="post">
+							<a href="../galerias/arbol.html"><img src="../imagenes/miniaturas/arbol mini.png"></a>
+ 							<div class="info transicion">
+ 								<h4>Árbol de navidad</h4>
+ 							</div>
+						</li>	
+ 					</ul>
+ 			</article>
+ 			<article class="posts">
+					<ul>
+ 						<li class="post">
+							<a href="../galerias/pAnalco.html"><img src="../imagenes/miniaturas/analco mini.png"></a>
+ 							<div class="info">
+ 								<h4>Puente Analco</h4>
+ 							</div>
+						</li>
+ 					</ul>
+ 			</article>
+ 			<article class="posts">
+					<ul>
+ 						<li class="post">
+							<a href="../galerias/fhrz.html"><img src="../imagenes/miniaturas/funerales mini.png"></a>
+ 							<div class="info">
+ 								<h4>Funerales Hernández</h4>
+ 							</div>
+						</li>
+ 					</ul>
+ 			</article>
+ 			<article class="posts">
+					<ul>
+ 						<li class="post">
+							<a href="../galerias/itd.html"><img src="../imagenes/miniaturas/itd mini.png"></a>
+ 							<div class="info">
+ 								<h4>Centro de Informacíon ITD</h4>
+ 							</div>
+						</li>
+ 					</ul>
+ 			</article>
+ 			<article class="posts">
+					<ul>
+ 						<li class="post">
+							<a href="../galerias/yogenhaus.html"><img src="../imagenes/miniaturas/yogenhaus mini.png"></a>
+ 							<div class="info">
+ 								<h4>Yogenhaus Lomas</h4>
+ 							</div>
+						</li>
+ 					</ul>
+ 			</article>
+ 		</section>
+		<footer>
+			<div class="wrap">
+				<div class="info2">
+					<p class="">
+						Direccion: Av. 20 de Noviembre 1040 Ote Col.Guillermina, Durango.</br>
+						Email: ventas@ledfactory.com.mx</br>
+						Telefono: (618) 810 14 09</br>
+						Lunes a Viernes: 10:00 a.m. a 8:00 p.m.</br>
+						Sabados: 10:00 a.m. a 4:00 p.m.
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
